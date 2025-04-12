@@ -1,0 +1,16 @@
+﻿<Window x:Class="GUI_SuperFarmer.Player3"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GUI_SuperFarmer"
+        mc:Ignorable="d"
+        Title="Player3" Height="300" Width="300">
+    <Grid>
+        <Button x:Name="btnRoll" Content="Roll the dice" HorizontalAlignment="Left" Margin="81,237,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnExchange" Content="Exchange" HorizontalAlignment="Left" Margin="173,237,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblHerd" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" Height="139" Width="256"/>
+        <Label x:Name="lblYourHerd" Content="Your herd:" HorizontalAlignment="Left" Margin="22,42,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

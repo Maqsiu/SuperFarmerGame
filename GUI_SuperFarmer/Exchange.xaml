@@ -1,0 +1,14 @@
+﻿<Window x:Class="GUI_SuperFarmer.Exchange"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GUI_SuperFarmer"
+        mc:Ignorable="d"
+        Title="Exchange" Height="250" Width="500">
+    <Grid>
+        <Label Content="Choose the type of exchange: " HorizontalAlignment="Center" Height="33" Margin="0,33,0,0" VerticalAlignment="Top" Width="424"/>
+        <ComboBox HorizontalAlignment="Center" Height="46" x:Name ="CB_Exchange" Margin="0,71,0,0" VerticalAlignment="Top" Width="424"/>
+        <Button x:Name="btnOK" Content="OK" HorizontalAlignment="Left" Height="28" Margin="38,144,0,0" VerticalAlignment="Top" Width="168" Click="btnOK_Click"/>
+    </Grid>
+</Window>

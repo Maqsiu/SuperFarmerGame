@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="GUI_SuperFarmer.UserNameAdd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GUI_SuperFarmer"
+        mc:Ignorable="d">
+
+    <Grid>
+        <!-- Tło -->
+        <Image Source="StartWindowImg.jpg" Stretch="UniformToFill" />
+
+        <!-- Plansza gracza -->
+        <Label Panel.ZIndex="1" x:Name="Label10" HorizontalAlignment="Center" Height="616" VerticalAlignment="Top" Width="472" Margin="0,16,0,0">
+            <Label.Background>
+                <ImageBrush ImageSource="PlayerBoard.png"/>
+            </Label.Background>
+        </Label>
+
+        <!-- Formularz graczy -->
+        <StackPanel Margin="0,120,0,0" HorizontalAlignment="Center" Panel.ZIndex="2">
+            <!-- Gracz 1 -->
+            <Label x:Name="player1Label" Content="First player name" FontSize="24" FontFamily="Cooper Black" HorizontalAlignment="Center" Visibility="Hidden"/>
+            <Border x:Name="Panel1" CornerRadius="10" Background="#AAFFFFFF" Margin="0,5,0,15" Visibility="Hidden">
+
+                <TextBox Panel.ZIndex="5" x:Name="player1Name" FontSize="24" Background="Transparent" BorderThickness="0" Padding="8" Width="250" HorizontalAlignment="Center" Visibility="Hidden"/>
+            </Border>
+
+            <!-- Gracz 2 -->
+            <Label x:Name="player2Label" Content="Second player name" FontSize="24" FontFamily="Cooper Black" HorizontalAlignment="Center" Visibility="Hidden"/>
+            <Border x:Name="Panel2" CornerRadius="10" Background="#AAFFFFFF" Margin="0,5,0,15" Visibility="Hidden">
+
+                <TextBox Panel.ZIndex="5" x:Name="player2Name" FontSize="24" Background="Transparent" BorderThickness="0" Padding="8" Width="250" HorizontalAlignment="Center" Visibility="Hidden"/>
+            </Border>
+
+            <!-- Gracz 3 -->
+            <Label x:Name="player3Label" Content="Third player name" FontSize="24" FontFamily="Cooper Black" HorizontalAlignment="Center" Visibility="Hidden"/>
+            <Border x:Name="Panel3" CornerRadius="10" Background="#AAFFFFFF" Margin="0,5,0,15" Visibility="Hidden">
+
+                <TextBox  Panel.ZIndex="5" x:Name="player3Name" FontSize="24" Background="Transparent" BorderThickness="0" Padding="8" Width="250" HorizontalAlignment="Center" Text="" Visibility="Hidden"/>
+            </Border>
+
+            <!-- Gracz 4 -->
+            <Label x:Name="player4Label" Content="Fourth player name" FontSize="24" FontFamily="Cooper Black" HorizontalAlignment="Center" Visibility="Hidden"/>
+            <Border x:Name="Panel4" CornerRadius="10" Background="#AAFFFFFF" Margin="0,5,0,25" Visibility="Hidden">
+
+                <TextBox x:Name="player4Name" FontSize="24" Background="Transparent" BorderThickness="0" Padding="8" Width="250" HorizontalAlignment="Center"
+                          Panel.ZIndex="5" Visibility="Hidden"/>
+            </Border>
+
+
+            <!-- Przycisk -->
+        </StackPanel>
+        <Button x:Name="Confirm_btn" Content="Confirm" Click="ConfirmSec_btn_Click"
+                    Background="#00A28C8C" FontSize="36" FontFamily="Cooper Black"
+                    Width="200" Height="60" Panel.ZIndex="5" Margin="156,479,156,93"/>
+    </Grid>
+</UserControl>

@@ -1,0 +1,57 @@
+﻿<Window x:Class="GUI_SuperFarmer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GUI_SuperFarmer"
+        mc:Ignorable="d"
+        Title="Strat a game" Height="788" Width="657">
+
+    <Window.Resources>
+        <Style TargetType="Button" x:Key="PulsingButton">
+            <Setter Property="RenderTransform">
+                <Setter.Value>
+                    <ScaleTransform ScaleX="1" ScaleY="1"/>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="RenderTransformOrigin" Value="0.5,0.5"/>
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="Button.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard RepeatBehavior="Forever" AutoReverse="True">
+                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" 
+                                         From="1.0" To="1.1" Duration="0:0:1"/>
+                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" 
+                                         From="1.0" To="1.1" Duration="0:0:1"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+
+
+    <Grid>
+        <Image Source="StartWindowImg.jpg" Stretch="UniformToFill"/>
+        <Button Style="{StaticResource PulsingButton}" Content="START A GAME" HorizontalAlignment="Center" Height="75" x:Name="SAG_btn" VerticalAlignment="Center" Width="288" Click="BtnStartAGame_Click" Background="#00000000" FontFamily="Cooper Black" FontSize="24" Opacity="0.93">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="#FFA06F6F" CornerRadius="15" Padding="10">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Content="HOW TO PLAY" FontFamily="Cooper Black" HorizontalAlignment="Center" Height="61" x:Name="HTP_btn" Margin="0,464,0,0" VerticalAlignment="Top" Width="208" Click="BtnHowToPlay_Click" Background="#FFC35757" FontSize="16">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="#FFAFC2C8" CornerRadius="15" Padding="10">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <ContentControl x:Name="MainContent"  />
+
+    </Grid>
+</Window>
